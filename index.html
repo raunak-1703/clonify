@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clonify</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="flex">
+    <div class="logo flex">
+      <img src="assets/logo.svg" class="pointer" alt="logo">
+
+      <!-- ☰ Hamburger placed right after logo -->
+      <div class="hamburger pointer" id="hamburger-toggle">
+        ☰
+      </div>
+
+      <div class="flex side">
+        <div class="home pointer" title="Home">
+          <svg alt="home" data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+            viewBox="0 0 24 24">
+            <path
+              d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732z">
+            </path>
+          </svg>
+        </div>
+        <div class="flex search">
+          <input type="text" autocomplete="off" name="search" id="search-box" placeholder="What do you want to play?">
+          <svg class="pointer" alt="search" role="img" viewBox="0 0 24 24" height="24" width="24"
+            xmlns="http://www.w3.org/2000/svg">
+            <title>search</title>
+            <path
+              d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z" />
+          </svg>
+          <svg data-encore-id="icon" alt="box" role="img" aria-hidden="true" cursor="pointer"
+            class="e-9960-icon e-9960-baseline" viewBox="0 0 24 24">
+            <title>Browse</title>
+            <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2"></path>
+            <path
+              d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4z">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="support flex">
+      <div class="pointer transform">Premium</div>
+      <div class="pointer transform">Support</div>
+      <div class="pointer transform">Download</div>
+      <div class="border"></div>
+    </div>
+
+    <div class="login flex">
+      <div class="flex install pointer transform">
+        <svg alt="download" role="img" viewBox="0 0 16 16" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528-.005-.005-2.472-2.473a.75.75 0 0 1 0-1.06" />
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13" />
+        </svg>
+        <span>Install App</span>
+      </div>
+      <div class="flex user">
+        <div class="pointer transform">Sign up</div>
+        <div class="profile pointer">Login</div>
+      </div>
+    </div>
+  </nav>
+  <!-- 👇 Hamburger Slide-Out Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <!-- Close Button -->
+    <div id="close-btn" class="close-btn pointer">×</div>
+    <!-- Sidebar content inside hamburger -->
+    <div class="mobile-library">
+      <span>Your Library</span>
+      <div class="wrapper">
+
+      </div>
+    </div>
+
+    <!-- Navbar links inside hamburger -->
+    <div class="mobile-links flex">
+      <div class="pointer transform">Premium</div>
+      <div class="pointer transform">Support</div>
+      <div class="pointer transform">Download</div>
+      <div class="flex  pointer transform" style="align-items: center; gap: 5px;">
+        <span>Install App</span>
+        <svg alt="download" role="img" viewBox="0 0 16 16" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528-.005-.005-2.472-2.473a.75.75 0 0 1 0-1.06" />
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13" />
+        </svg>
+      </div>
+
+      <div class="pointer transform">Sign up</div>
+      <div class=" pointer transform">Login</div>
+
+    </div>
+  </div>
+
+  <main class="grid">
+    <div class="library flex">
+      <div class="your-library flex">
+        <span>Your Library</span>
+
+        <div class="plus">
+          <svg alt="plus" data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+            viewBox="0 0 16 16"
+            style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+            <title>Create playlist or folder</title>
+            <path
+              d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <div class="wrapper" id="wrapper">
+
+      </div>
+      <div class="footer-area flex">
+        <div class="sub-footer">
+          <span class="pointer">Legal</span>
+          <span class="pointer">Safety & Privacy Cener</span>
+          <span class="pointer">Privacy Policy</span>
+          <span class="pointer">Cookies</span>
+          <span class="pointer">About Ads</span>
+          <span class="pointer">Accessibility</span>
+        </div>
+        <div class="language flex">
+          <span class="pointer">
+            English
+          </span>
+          <svg alt="language" data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+            viewBox="0 0 16 16"
+            style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+            <path
+              d="M8.152 16H8a8 8 0 1 1 .152 0m-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296M4.877 7.25c.062-1.771.34-3.386.773-4.624q.148-.427.329-.806a6.51 6.51 0 0 0-4.436 5.43zm-3.334 1.5a6.51 6.51 0 0 0 4.436 5.43 8 8 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129zm5.048 0c-.061 1.771-.339 3.386-.772 4.624q-.123.353-.268.674a6.5 6.5 0 0 0 4.071-5.298zm3.031-1.5a6.51 6.51 0 0 0-4.071-5.298q.145.322.268.674c.433 1.238.711 2.853.772 4.624z">
+            </path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="songs flex">
+      <div class="lists flex">
+        <h2 class="pointer" data-query="top hindi songs">Top Hindi Songs</h2>
+        <div class="same flex" id="th-songs">
+
+        </div>
+
+      </div>
+      <div class="lists flex">
+        <h2 class="pointer"  data-query="romantic hits" >Romantic Hits</h2>
+        <div class="same flex" id="rh-songs">
+
+        </div>
+      </div>
+      <div class="lists flex">
+        <h2 class="pointer" data-query="Brahmastra">Bollywood</h2>
+        <div class="same flex" id="b-songs">
+ 
+        </div>
+      </div>
+      <div class="lists flex">
+        <h2 class="pointer" data-query="party hits">Party Songs</h2>
+        <div class="same flex" id="p-songs">
+          
+        </div>
+      </div>
+      <div class="lists flex">
+        <h2 class="pointer" data-query="Yeh Jawaani Hai Deewani">Hit Songs</h2>
+        <div class="same flex" id="hit-songs">
+
+        </div>
+      </div>
+      <div class="lists flex">
+        <h2 class="pointer" data-query="billboard hits">English Pop</h2>
+        <div class="same flex" id="e-songs">
+          
+        </div>
+      </div>
+      <div class="lists end-footer flex">
+        <div class="hline hline1"></div>
+        <div class="footer-last">
+          <div class="info flex">
+            <section>
+              <p>Company</p>
+              <p>About</p>
+              <p>Jobs</p>
+              <p>For the Record</p>
+            </section>
+            <section>
+              <p>Communiities</p>
+              <p>Developers</p>
+              <p>Advertising</p>
+              <p>Investors</p>
+              <p>Vendors</p>
+              <p>For Artists</p>
+            </section>
+            <section>
+              <p>Useful inks</p>
+              <p>Support</p>
+              <p>Free Mobile App</p>
+              <p>Popular by Country</p>
+            </section>
+            <section>
+              <p>Clonify Plans</p>
+              <p>Premium Individual</p>
+              <p>Premium Duo</p>
+              <p>Premium Family</p>
+              <p>Premium Student</p>
+              <p>Clonify Free</p>
+            </section>
+          </div>
+          <div class="flex  photu">
+            <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+              viewBox="0 0 16 16"
+              style="--encore-icon-fill: var(--text-base, #000000); --encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+              <path
+                d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.65 2.65 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.5 2.5 0 0 1-.921-.599 2.5 2.5 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.5 2.5 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.9 3.9 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942S0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372s1.126.048 3.299.048 2.445-.01 3.298-.048c.853-.04 1.433-.174 1.94-.372a4.1 4.1 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942S16 10.172 16 7.999s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.9 3.9 0 0 0-.923-1.418A3.9 3.9 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05z">
+              </path>
+              <path
+                d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216m0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335m4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92">
+              </path>
+            </svg>
+            <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+              viewBox="0 0 16 16"
+              style="--encore-icon-fill: var(--text-base, #000000); --encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+              <path
+                d="M13.54 3.889a2.97 2.97 0 0 0 1.333-1.683 6 6 0 0 1-1.929.738 3 3 0 0 0-.996-.706 3 3 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.93 2.93 0 0 0-.889 2.15q0 .318.08.691a8.5 8.5 0 0 1-3.484-.932A8.5 8.5 0 0 1 1.532 2.54a3 3 0 0 0-.413 1.523q0 .778.361 1.445.36.668.988 1.08a2.9 2.9 0 0 1-1.373-.374v.04q0 1.088.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.94 2.94 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.95 2.95 0 0 0 1.77.603 5.94 5.94 0 0 1-3.77 1.302q-.365 0-.722-.048A8.4 8.4 0 0 0 5.15 14q1.358 0 2.572-.361 1.215-.36 2.147-.988a9 9 0 0 0 1.683-1.46q.75-.834 1.234-1.798a9.5 9.5 0 0 0 .738-1.988 8.4 8.4 0 0 0 .246-2.429 6.2 6.2 0 0 0 1.508-1.563q-.84.373-1.738.476">
+              </path>
+            </svg>
+            <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-9960-icon e-9960-baseline"
+              viewBox="0 0 16 16"
+              style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+              <path
+                d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8 8 0 0 0 16 8">
+              </path>
+            </svg>
+          </div>
+        </div>
+        <div class="hline hline2"></div>
+        <div class="copyright" style="padding-top: 5px; color: rgb(179 179 179);">
+          © 2025 Clonify 
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="playbar flex">
+    <div class="flex" style="gap: 10px; align-items: center;">
+          <img id="current-song-img" width="50" height="50" src="assets/music.svg">
+    <div id="track">Empty</div>
+    </div>
+
+    <div class="songcontrol flex">
+      <div class="player flex">
+        <svg id="previous" class="pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+          color="#fbfbfb" fill="transparent">
+          <path
+            d="M8.06492 12.6258C8.31931 13.8374 9.67295 14.7077 12.3802 16.4481C15.3247 18.3411 16.797 19.2876 17.9895 18.9229C18.3934 18.7994 18.7654 18.5823 19.0777 18.2876C20 17.4178 20 15.6118 20 12C20 8.38816 20 6.58224 19.0777 5.71235C18.7654 5.41773 18.3934 5.20057 17.9895 5.07707C16.797 4.71243 15.3247 5.6589 12.3802 7.55186C9.67295 9.29233 8.31931 10.1626 8.06492 11.3742C7.97836 11.7865 7.97836 12.2135 8.06492 12.6258Z"
+            stroke="white" stroke-width="1.5" stroke-linejoin="round"></path>
+          <path d="M4 4L4 20" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <svg id="pause" class="pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+          color="#fbfbfb" fill="transparent">
+          <path
+            d="M4 7C4 5.58579 4 4.87868 4.43934 4.43934C4.87868 4 5.58579 4 7 4C8.41421 4 9.12132 4 9.56066 4.43934C10 4.87868 10 5.58579 10 7V17C10 18.4142 10 19.1213 9.56066 19.5607C9.12132 20 8.41421 20 7 20C5.58579 20 4.87868 20 4.43934 19.5607C4 19.1213 4 18.4142 4 17V7Z"
+            stroke="white" stroke-width="1.5"></path>
+          <path
+            d="M14 7C14 5.58579 14 4.87868 14.4393 4.43934C14.8787 4 15.5858 4 17 4C18.4142 4 19.1213 4 19.5607 4.43934C20 4.87868 20 5.58579 20 7V17C20 18.4142 20 19.1213 19.5607 19.5607C19.1213 20 18.4142 20 17 20C15.5858 20 14.8787 20 14.4393 19.5607C14 19.1213 14 18.4142 14 17V7Z"
+            stroke="white" stroke-width="1.5"></path>
+        </svg>
+        <svg id="play" class="pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+          color="#fbfbfb" fill="transparent">
+          <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"></circle>
+          <path
+            d="M15.9453 12.3948C15.7686 13.0215 14.9333 13.4644 13.2629 14.3502C11.648 15.2064 10.8406 15.6346 10.1899 15.4625C9.9209 15.3913 9.6758 15.2562 9.47812 15.0701C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.47812 8.92995C9.6758 8.74381 9.9209 8.60868 10.1899 8.53753C10.8406 8.36544 11.648 8.79357 13.2629 9.64983C14.9333 10.5356 15.7686 10.9785 15.9453 11.6052C16.0182 11.8639 16.0182 12.1361 15.9453 12.3948Z"
+            stroke="white" fill="white" stroke-width="1.5" stroke-linejoin="round"></path>
+        </svg>
+        <svg id="next" class="pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+          color="#fbfbfb" fill="transparent">
+          <path
+            d="M15.9351 12.6258C15.6807 13.8374 14.327 14.7077 11.6198 16.4481C8.67528 18.3411 7.20303 19.2876 6.01052 18.9229C5.60662 18.7994 5.23463 18.5823 4.92227 18.2876C4 17.4178 4 15.6118 4 12C4 8.38816 4 6.58224 4.92227 5.71235C5.23463 5.41773 5.60662 5.20057 6.01052 5.07707C7.20304 4.71243 8.67528 5.6589 11.6198 7.55186C14.327 9.29233 15.6807 10.1626 15.9351 11.3742C16.0216 11.7865 16.0216 12.2135 15.9351 12.6258Z"
+            stroke="white" stroke-width="1.5" stroke-linejoin="round"></path>
+          <path d="M20 5V19" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <div class="seekbar flex">
+        <div id="currentTime" style="color:white;">0:00</div>
+        <div id="progressbar">
+
+          <div id="progress"></div>
+          <div id="circle"></div>
+        </div>
+        <div id="totalTime" style="color: white;">0:00</div>
+      </div>
+    </div>
+    <div class="volume flex">
+      <img src="" alt="">
+      <div id="volumebar">
+        <img src="assets/mute.svg" alt="unmute">
+        <div id="volume"></div>
+        <div id="circle2"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,834 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 15px;
+}
+
+.flex {
+    display: flex;
+
+}
+
+nav {
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    width: 45%;
+}
+
+.search {
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.side {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.home {
+    width: 50px;
+    height: 50px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+}
+
+.home:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.04);
+}
+
+#search-box {
+    width: 100%;
+    border: none;
+    border-radius: 1000px;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 15px 50px 15px 35px;
+    flex-grow: 1;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#search-box:hover {
+    background-color: #2a2a2a;
+}
+
+#search-box:hover~svg[alt="search"] {
+    fill: white;
+}
+
+form {
+    position: relative;
+}
+
+input:focus {
+    outline: 2px solid white;
+}
+
+input::placeholder {
+    color: #b3b3b3;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+svg[alt="search"] {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    fill: rgb(179, 179, 179);
+}
+
+svg[alt="box"] {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    padding-left: 10px;
+    border-left: 1px solid #7c7c7c;
+    height: 24px;
+    width: 24px;
+    fill: rgb(179, 179, 179);
+    transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+svg[alt="box"]:hover {
+    transform: scale(1.04);
+    fill: white;
+}
+
+svg[alt="download"] {
+    fill: rgb(179, 179, 179);
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+svg[alt="home"] {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.support {
+    color: rgb(179, 179, 179);
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    gap: 10px;
+    margin-left: 5%;
+}
+
+.transform {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.transform:hover {
+    color: white;
+    transform: scale(1.04);
+}
+
+.border {
+    padding-right: 15px;
+    border-right: 1px solid rgb(179, 179, 179);
+    height: 25px;
+}
+
+.login {
+    justify-content: center;
+    align-items: center;
+    gap: 47px;
+    font-weight: 700;
+    color: rgb(179, 179, 179);
+}
+
+.install {
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.install:hover svg[alt="download"] {
+    transform: scale(1.04);
+    fill: white;
+}
+
+.profile {
+    background-color: white;
+    color: black;
+    padding: 16px 35px;
+    border-radius: 40px;
+    transform: transform 0.2s ease-in-out;
+}
+
+.profile:hover {
+    transform: scale(1.04);
+}
+
+.user {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 2.5fr;
+    column-gap: 10px;
+}
+
+.library {
+    height: 73vh;
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+svg[alt="plus"] {
+    width: 16px;
+    height: 16px;
+    fill: rgb(179, 179, 179);
+}
+
+.your-library {
+    justify-content: space-between;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 20px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 18px 49px #121212;
+    flex-shrink: 0;
+    font-size: larger;
+}
+
+.your-library span {
+    font-weight: 700;
+}
+
+.wrapper {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50vh;
+    scrollbar-color: #555 transparent;
+    scrollbar-width: thin;
+}
+.details{
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.details img{
+    width: 30px;
+    height: 30px;
+}
+.card {
+    height: fit-content;
+    margin: 5px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    background-color: #121212;
+    border-radius: 4px;
+    padding: 12px 5px;
+    justify-content: space-between;
+   border: 1px solid white;
+   align-items: center;
+   gap: 5px;
+
+}
+.card.playing {
+  border: 2px solid #1db954; /* Spotify green */
+  box-shadow: 0 0 10px #1db95488; /* soft green glow */
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.control{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.control img{
+    width: 24px;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.sub-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    row-gap: 10px;
+    column-gap: 3px;
+    font-size: 11px;
+    padding: 10px 20px;
+    color: rgb(179 179 179)
+}
+
+svg[alt="language"] {
+    width: 16px;
+    height: 16px;
+}
+
+.language {
+    fill: white;
+    align-items: center;
+    column-gap: 5px;
+    padding: 10px 15px;
+    border: 2px solid grey;
+    width: fit-content;
+    margin-left: 20px;
+    border-radius: 1000px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.language:hover {
+    transform: scale(1.04);
+}
+
+.footer-area {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Align sub-footer and language to the bottom */
+    padding-bottom: 10px;
+}
+
+.songs {
+    height: 73vh;
+    width: 100%;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    scrollbar-color: #555 transparent;
+    scrollbar-width: thin;
+    background-color: #121212;
+}
+
+.songs::-webkit-scrollbar {
+    height: 8px;
+}
+
+.songs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.songs::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.songs::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+.lists {
+    flex: 0 0 60%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.lists h2:hover {
+    text-decoration: underline;
+}
+
+.lists h4:hover {
+    text-decoration: underline;
+}
+
+.samec p:hover {
+    text-decoration: underline;
+}
+
+.same {
+    overflow-y: hidden;
+    overflow-x: auto;
+
+}
+
+.same::-webkit-scrollbar {
+    height: 2px;
+}
+
+.same::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.same::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.same {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.samec {
+    flex: 0 0 auto;
+    width: clamp(120px, 40vw, 160px);
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    position: relative;
+}
+
+.samec:hover {
+    background-color: #2a2a2a;
+}
+
+.samec:hover {
+    transform: scale(1.04);
+}
+
+.samec:hover svg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.samec img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.samec svg {
+    position: absolute;
+    width: 20px;
+    background-color: #00CC00;
+    padding: 10px;
+    border-radius: 50%;
+    top: 105px;
+    right: 17px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.samec h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+
+.samec p {
+    font-size: 12px;
+    color: #b3b3b3;
+    text-transform: capitalize;
+}
+
+.hline {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(58 58 58);
+}
+
+.footer-last {
+    box-sizing: border-box;
+}
+
+.hline1 {
+    margin-bottom: 4%;
+}
+
+.hline2 {
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+section svg {
+    width: clamp(16px, 2vw, 24px);
+    height: auto;
+    fill: white;
+}
+
+section p {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.info section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 120px;
+    max-width: 160px;
+    flex: 1 1 120px;
+}
+
+.photu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.photu svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    opacity: 0.8;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.photu svg:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.info>section p:first-child {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info section p:not(:first-child) {
+    color: rgb(179, 179, 179);
+}
+
+.info section p:not(:first-child):hover {
+    color: white;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* makes it circular */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.plus:hover {
+    background-color: #1f1f1f;
+}
+
+.samec svg:hover {
+    transform: scale(1.04);
+    background-color: #00cc00ea;
+}
+
+/* Hamburger only visible on small screens */
+.hamburger {
+    display: none;
+    font-size: 22px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+#mobile-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.671);
+    z-index: 999;
+    padding: 0px 10px;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
+
+.mobile-library>span {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.mobile-links {
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(178 179 179);
+}
+
+#mobile-menu.open {
+    transform: translateX(0);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.close-btn {
+    align-self: flex-end;
+    font-size: 24px;
+    color: white;
+}
+.playbar{
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    border-radius: 8px; 
+    gap: 10px;
+    padding: 0px 10px;
+    background-color: #121212;
+
+}
+.volume{
+    width: 20%;
+    background-color:darkgrey;
+    height: 4px;
+    transform: translateY(19px);
+    border-radius: 10px;
+}
+#volumebar{
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+#volume{
+    height: 4px;
+    width: 0%;
+    border-radius: 10px;
+    background-color: rgb(29, 185, 84);
+}
+#circle2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    transition: width 0.5s;
+    position: absolute;
+    left: 0%;
+    top: -64%;
+}
+#volumebar>img{
+    position: absolute;
+    left: -10%;
+    top: -240%;
+}
+#pause{
+    display: none;
+}
+#next:hover{
+    transform: scale(1.05);
+}
+#previous:hover{
+    transform: scale(1.05);
+}
+#pause:hover{
+    transform: scale(1.05);
+}
+#play:hover{
+    transform: scale(1.05);
+}
+#play{
+    display: inline;
+}
+#play , #pause, #previous, #next{
+    transition: transform 0.3s ease-in-out;
+}
+.songcontrol{
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+#track{
+    color:white;
+    font-weight: 600;
+    width: 40%;
+}
+.player{
+    gap: 30px;
+}
+.playbar svg{
+   width: 35px;
+    height: 35px;
+}
+.seekbar{
+    position: relative;
+    width: 88%;
+    height: 4px;
+   background-color: darkgrey;
+    bottom: 8px;
+    border-radius: 10px;
+}
+#totalTime{
+    color: black;
+    position: absolute;
+    right: -40px;
+    top: -237%;
+    cursor:default;
+}
+#currentTime{
+    color: black;
+    position: absolute;
+    left: -40px;
+    top: -237%;
+    cursor:default;
+}
+#circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    transition: width 0.5s;
+    position: absolute;
+    left: 0%;
+    top: -64%;
+}
+#progressbar{
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+#progress{
+    height: 4px;
+    width: 0%;
+    border-radius: 10px;
+    background-color:rgb(29, 185, 84);
+}
+@media (max-width: 768px) {
+    body {
+        padding: 2px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .library,
+    .support,
+    .login {
+        display: none;
+    }
+
+    .logo {
+        gap: 10px;
+        flex-grow: 1;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .songs {
+        width: 100%;
+        height: 77vh;
+    }
+
+    .info {
+        gap: 30px;
+        padding-bottom: 40px;
+    }
+
+    .info section {
+        width: auto;
+        max-width: none;
+    }
+
+    .wrapper {
+        padding: 0px;
+    }
+
+    card {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 425px){
+    .songs{
+        height: 65vh;
+        background-color:#1e1e1e;
+    }
+    .playbar{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+        text-align: center;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+    #track{
+        width: 100%;
+        text-align: center;
+    }
+    .songcontrol{
+        width: 70%;
+    }
+    .volume{
+        display: none;
+    }
+}
