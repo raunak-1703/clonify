@@ -23,5 +23,5 @@ Clonify is a sleek, responsive, and fully custom-built web music player made usi
 
 ---
 
-## 📁 Folder Structure
+
 
